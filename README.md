@@ -1,4 +1,4 @@
-# Camera-API
+# Cameras-API
 ![alt text](https://github.com/vernieri/Cameras-API/blob/master/cams.png)
 
 ## A Simple Camera-API
