@@ -33,7 +33,7 @@ $ node server
 Make sure that your port 3000 is avaible.
 if not, change for any port you want.
 
-## Contribuing
+## Contributing
 
 If You found a Bug or wants to help please, feel free to commit.
 If You want to contact me please: https://bit.ly/2yih5wX
