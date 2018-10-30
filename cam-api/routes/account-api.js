@@ -7,7 +7,7 @@ var mongojs = require('mongojs');
 var db = mongojs('YOUR MONGO LINK HERE/DB', ['COLLECTION']);
 
 
-// all cam
+// all accounts
 router.get('/accounts', function(req, res, next){
 	db.accounts.find(function(err, account){
 		if(err){
@@ -17,7 +17,7 @@ router.get('/accounts', function(req, res, next){
 	});
 });
 
-//single cams
+//single account
 router.get('/account/:id', function(req, res, next){
 	db.accounts.findOne({_id: mongojs.ObjectId(req.params.id)}, function(err, account){
 		if(err){
@@ -27,7 +27,7 @@ router.get('/account/:id', function(req, res, next){
 	});
 });
 
-//Save cam
+//Save account
 router.post('/account', function(req, res, next){
 	var account = req.body;
 	if(account.name == '' && account.email == '' && account.company !== 0 && account.office !== 0 && account.admin !== 0){
@@ -45,7 +45,7 @@ router.post('/account', function(req, res, next){
 
 });
 
-//Delete cam
+//Delete account
 router.delete('/account/:id', function(req, res, next){
 	db.accounts.remove({_id: mongojs.ObjectId(req.params.id)}, function(err, account){
 		if(err){
