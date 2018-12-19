@@ -31,6 +31,7 @@ app.use('/api', players);
 app.use('/api', positions);
 app.use('/api', accounts);
 
+
 app.listen(port, function(){
 	console.log('[+] Server started on port '+port);
 });
