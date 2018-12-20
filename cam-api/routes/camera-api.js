@@ -14,7 +14,7 @@ router.get('/cams', function(req, res, next){
 	});
 });
 
-//single cams
+//Single Cams
 router.get('/cam/:id', function(req, res, next){
 	db.cams.findOne({_id: mongojs.ObjectId(req.params.id)}, function(err, cam){
 		if(err){
