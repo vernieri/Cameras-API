@@ -4,7 +4,7 @@ var mongojs = require('mongojs');
 var db = mongojs('YOUR MONGO DB HERE/DB', ['COLLECTION']);
 
 
-// all Player
+// All Player
 router.get('/players', function(req, res, next){
 	db.players.find(function(err, players){
 		if(err){
@@ -14,7 +14,7 @@ router.get('/players', function(req, res, next){
 	});
 });
 
-//single Player
+//Single Player
 router.get('/player/:id', function(req, res, next){
 	db.players.findOne({_id: mongojs.ObjectId(req.params.id)}, function(err, player){
 		if(err){
