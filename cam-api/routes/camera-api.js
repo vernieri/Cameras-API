@@ -3,7 +3,6 @@ var router = express.Router();
 var mongojs = require('mongojs');
 var db = mongojs('YOUR MONGO HERE/DB', ['COLLECTION']);
 
-
 // all cam
 router.get('/cams', function(req, res, next){
 	db.cams.find(function(err, cams){
